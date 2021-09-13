@@ -1,2 +1,2 @@
 #!/bin/bash
-"$PWD\n"
+"$ realpath 0x00-shell_basics\n"
