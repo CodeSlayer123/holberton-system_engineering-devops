@@ -1,0 +1,2 @@
+#!/nvbin/bash
+printenv  
