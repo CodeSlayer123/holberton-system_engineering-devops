@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#Displays Holberton School 10 times using a while loop, but the 9th time will display Hi after Holberton School
+holberton=0
+
+while [ $holberton -lt 10 ]
+do
+    echo "Holberton School"    
+    
+ holberton=$(( $holberton + 1 ))
+
+
+if [ $holberton -eq 9 ]
+then
+   echo "Hi"
+fi
+
+
+ 
+done
+
+

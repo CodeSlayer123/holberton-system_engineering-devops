@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#Displays Holberton School 10 times using an until loop
+holberton=1
+
+until [ $holberton -gt 10 ]
+do
+    echo "Holberton School"
+ 
+ holberton=$(( $holberton + 1 ))
+
+done

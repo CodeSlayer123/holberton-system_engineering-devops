@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+#Displays Holberton School 10 times using a while loop and if else statements, but the 4th time will display bad luck, and the 8th time will display good luck
+holberton=1
+
+while [ $holberton -lt 11 ]
+do
+    if [ $holberton -eq 4 ]
+    then
+	echo "bad luck"
+    elif [ $holberton -eq 8 ]
+    then
+	echo "goodluck"
+
+	else
+    
+	echo "Holberton School"
+
+
+	    
+fi    
+ holberton=$(( $holberton + 1 ))
+
+
+
+
+
+ 
+done
+
+
