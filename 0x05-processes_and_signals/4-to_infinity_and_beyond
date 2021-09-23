@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#Creates forever loop with sleep 2
+
+while :
+do
+    echo "To infinity and beyond"
+    sleep 2
+    
+done
+
+
+#pgrep -l bash
+
+#ps -a -f -aux | grep bash  

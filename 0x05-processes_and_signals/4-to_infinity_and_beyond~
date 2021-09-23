@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#Displays lines containing the bash word, thus allowing user to easily get the PID of user's Bash process
+# shellcheck disable=SC2009
+
+while :
+do
+    echo "To infinity and beyond"
+    sleep 2
+    
+done
+
+
+#pgrep -l bash
+
+#ps -a -f -aux | grep bash  

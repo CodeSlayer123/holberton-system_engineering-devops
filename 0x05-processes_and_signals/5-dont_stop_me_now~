@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Displays lines containing the bash word, thus allowing user to easily get the PID of user's Bash process
+# shellcheck disable=SC2009
+
+kill "$(pgrep -f 5-dont_stop_me_now)" 
+
+
+#pgrep -l bash
+
+#ps -a -f -aux | grep bash  

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#Displays to infinity and beyond indefinitely and I am invincible!!! when receiving a SIGTERM signal
+ trap "echo I am invincible!!!", 15
+
+while :
+do
+
+    echo "To infinity and beyond"
+    sleep 2
+
+
+done
+
+#pgrep -l bash
+
+#ps -a -f -aux | grep bash  

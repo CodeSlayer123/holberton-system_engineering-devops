@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#Kill looping file without kill command
+
+pkill -f "7-highlander" 
+
+
+#pgrep -l bash
+
+#ps -a -f -aux | grep bash  

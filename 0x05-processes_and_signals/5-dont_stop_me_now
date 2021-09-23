@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#Kill forever loop using kill
+
+kill "$(pgrep -f 5-dont_stop_me_now)" 
+
+
+#pgrep -l bash
+
+#ps -a -f -aux | grep bash  
