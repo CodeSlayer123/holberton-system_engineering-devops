@@ -6,6 +6,6 @@ until [ $holberton -gt 10 ]
 do
     echo "Holberton School"
  
- holberton=$(( $holberton + 1 ))
+ holberton=$(( holberton + 1 ))
 
 done

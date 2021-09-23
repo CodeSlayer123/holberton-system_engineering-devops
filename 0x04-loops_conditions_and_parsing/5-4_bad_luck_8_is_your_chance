@@ -9,7 +9,7 @@ do
 	echo "bad luck"
     elif [ $holberton -eq 8 ]
     then
-	echo "goodluck"
+	echo "good luck"
 
 	else
     
@@ -18,7 +18,7 @@ do
 
 	    
 fi    
- holberton=$(( $holberton + 1 ))
+ holberton=$(( holberton + 1 ))
 
 
 

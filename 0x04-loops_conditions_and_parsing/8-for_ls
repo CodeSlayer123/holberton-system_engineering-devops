@@ -3,8 +3,7 @@
 
 for ls in *
 do
-    
-ls $ls | tr -d [:digit:]-
+echo "$ls"| tr -d "[:digit:]-"
     
 
 done
