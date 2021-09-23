@@ -3,7 +3,11 @@
 
 for ls in *
 do
-echo "$ls"| tr -d "[:digit:]-"
+    echo "$ls" | cut -d- -f2
+
+
+
+	#tr -d "[:digit:]-"
     
 
 done
