@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #Kill forever loop using kill
 
-kill "$(pgrep 5-dont_stop_me_now)" 
+kill "$(pgrep -f 5-dont_stop_me_now)" 
 
 
 #pgrep -l bash
