@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 #transfers file ffrom our client to a server
-if (( $# < 4 )); then
-    echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
-else
-    path=$1
-    ip=$2
-    user=$3
-    ssh=$4
-    scp -o StrictHostKeyChecking=no -i $ssh $path $user@$ip:~/
-fi
+sudo apt-get update
+sudo apt-get -y upgrade
+sudo apt-get -y install nginx
+#sudo ufw allow 'nginx HTTP'
+sudo service nginx start
+echo -e "Hello World!" >> var/www/html/index.html
+cat var/www/html/index.html
