@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #transfers file ffrom our client to a server
-sudo apt-get update
+sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
+# sudo ufw allow 'Nginx HTTP'
 sudo service nginx start
-echo "Hello World!" > '/var/www/html/index.nginx-debian.html'
+sudo echo "Hello World!" > '/var/www/html/index.nginx-debian.html'
 sudo /etc/init.d/nginx restart
