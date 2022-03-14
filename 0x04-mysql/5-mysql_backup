@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+gzip -c | sudo mysqldump -u root -p "$1" --all-databases > backup.sql
