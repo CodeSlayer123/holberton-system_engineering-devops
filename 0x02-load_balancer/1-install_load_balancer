@@ -3,6 +3,7 @@
 sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y install haproxy
+sudo service haproxy start
 sudo echo -e "\nfrontend myfrontend\n
 \tbind *:80\n
 \tstats uri /haproxy?stats\n
