@@ -7,6 +7,7 @@ sudo echo -e "\nfrontend myfrontend\n
 \tbind 0.0.0.0:80\n
 \tdefault_backend myservers\n
 \nbackend myservers\n
-\tserver server1 127.0.0.1:8000\n
+\tserver 3613-web-01 100.26.28.112:80 check\n
+\tserver 3613-web-02 54.197.30.253:80 check\n
 \tbalance roundrobin" | sudo tee -a /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
