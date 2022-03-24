@@ -29,9 +29,10 @@ if __name__ == "__main__":
                 tmp["username"] = username
                 my_list.append(tmp)
         x.close()
+        data[user_id] = my_list
+
     y.close()
 
-    data[user_id] = my_list
 
     with open('todo_all_employees.json', 'w') as f:
         json.dump(data, f)
