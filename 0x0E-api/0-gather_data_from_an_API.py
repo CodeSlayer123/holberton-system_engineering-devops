@@ -17,9 +17,8 @@ if __name__ == "__main__":
                 title = title + i['title'] + '\n' + '\t '
                 completed += 1
 
-    #y = urllib.request.urlopen('https://jsonplaceholder.typicode.com/users/{}'
-    #                           .format(user_id))
-    user = requests.get("https://jsonplaceholder.typicode.com/users/{}".format(user_id)).json()
+    user = requests.get("https://jsonplaceholder.typicode.com/users/{}"
+                        .format(user_id)).json()
 
     print("Employee {} is done with tasks ({}/{}):"
           .format(user['name'], completed, tasks))

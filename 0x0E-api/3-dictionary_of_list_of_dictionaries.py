@@ -13,7 +13,8 @@ if __name__ == "__main__":
         username = i.get('username')
         user_id = i.get('id')
 
-        todo = requests.get('https://jsonplaceholder.typicode.com/todos/').json()
+        todo = requests.get(
+            'https://jsonplaceholder.typicode.com/todos/').json()
         for j in todo:
             if j.get('userId') == int(user_id):
                 tmp = {}
