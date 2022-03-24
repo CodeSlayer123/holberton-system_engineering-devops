@@ -1,12 +1,9 @@
 #!/usr/bin/python3
 """lists progress of employee's tasks through REST API"""
-
+import json
+import requests
+import sys
 if __name__ == "__main__":
-    import json
-    import requests
-    import sys
-    #import urllib.request
-
     user_id = sys.argv[1]
     completed = 0
     tasks = 0
