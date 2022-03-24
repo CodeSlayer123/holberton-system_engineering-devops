@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-"""lists progress of employee's tasks through REST API"""
+"""lists progress of employee's tasks through REST API in json"""
 
 if __name__ == "__main__":
-    import csv
     import json
     import sys
     import urllib.request

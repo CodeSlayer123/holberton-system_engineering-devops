@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""lists progress of employee's tasks through REST API"""
+"""lists progress of employee's tasks through REST API in csv"""
 
 if __name__ == "__main__":
     import csv
