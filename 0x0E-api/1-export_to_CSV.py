@@ -18,7 +18,7 @@ if __name__ == "__main__":
             tasks += 1
             y = urllib.request.urlopen('https://jsonplaceholder.typicode.com/users/{}'.format(user_id))
             user = json.loads(y.read())
-            status = str(i.get('completed'))
+            status = i.get('completed')
             title = i.get('title')
             username = user.get('username')
             rows.append([user_id, username, status, title])
