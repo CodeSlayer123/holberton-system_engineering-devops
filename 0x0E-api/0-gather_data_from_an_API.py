@@ -20,6 +20,6 @@ if __name__ == "__main__":
     user = requests.get("https://jsonplaceholder.typicode.com/users/{}"
                         .format(user_id)).json()
 
-    print("Employee {} is done with tasks ({}/{}):"
+    print("Employee {} is done with tasks({}/{}):"
           .format(user['name'], completed, tasks))
     print(title[:len(title) - 3])
