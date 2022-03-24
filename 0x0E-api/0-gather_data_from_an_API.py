@@ -3,14 +3,16 @@
 
 if __name__ == "__main__":
     import json
+    import requests
     import sys
-    import urllib.request
+    #import urllib.request
 
     user_id = sys.argv[1]
     completed = 0
     tasks = 0
     title = "\t "
-    x = urllib.request.urlopen('https://jsonplaceholder.typicode.com/todos/')
+    #x = urllib.request.urlopen('https://jsonplaceholder.typicode.com/todos/')
+    x = requests.get("https://jsonplaceholder.typicode.com/todos/")
     todo = json.loads(x.read())
     for i in todo:
         if i.get('userId') == int(user_id):
@@ -20,8 +22,10 @@ if __name__ == "__main__":
                 completed += 1
     x.close()
 
-    y = urllib.request.urlopen('https://jsonplaceholder.typicode.com/users/{}'
-                               .format(user_id))
+    #y = urllib.request.urlopen('https://jsonplaceholder.typicode.com/users/{}'
+    #                           .format(user_id))
+    y = requests.get("https://jsonplaceholder.typicode.com/users/{}".format(user_id))
+
     user = json.loads(y.read())
     print("Employee {} is done with tasks ({}/{}):"
           .format(user['name'], completed, tasks))
