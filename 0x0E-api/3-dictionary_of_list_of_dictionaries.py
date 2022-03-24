@@ -2,23 +2,18 @@
 """lists progress of employee's tasks through REST API in json"""
 
 if __name__ == "__main__":
-    import csv
     import json
-    import sys
-    import urllib.request
+    import requests
 
     data = {}
     my_list = []
 
-    y = urllib.request.urlopen('https://jsonplaceholder.typicode.com/users/')
-    user = json.loads(y.read())
+    user = requests.get('https://jsonplaceholder.typicode.com/users/').json()
     for i in user:
         username = i.get('username')
         user_id = i.get('id')
 
-        x = urllib.request.urlopen(
-            'https://jsonplaceholder.typicode.com/todos/')
-        todo = json.loads(x.read())
+        todo = requests.get('https://jsonplaceholder.typicode.com/todos/').json()
         for j in todo:
             if j.get('userId') == int(user_id):
                 tmp = {}
@@ -28,10 +23,7 @@ if __name__ == "__main__":
                 tmp["completed"] = status
                 tmp["username"] = username
                 my_list.append(tmp)
-        x.close()
         data[user_id] = my_list
-
-    y.close()
 
     with open('todo_all_employees.json', 'w') as f:
         json.dump(data, f)
