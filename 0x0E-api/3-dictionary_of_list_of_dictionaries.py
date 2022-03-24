@@ -31,6 +31,7 @@ if __name__ == "__main__":
         x.close()
         data[user_id] = my_list
 
+
     y.close()
 
     with open('todo_all_employees.json', 'w') as f:
