@@ -16,7 +16,9 @@ if __name__ == "__main__":
     for i in todo:
         if i.get('userId') == int(user_id):
             tasks += 1
-            y = urllib.request.urlopen('https://jsonplaceholder.typicode.com/users/{}'.format(user_id))
+            y = urllib.request.urlopen(
+                'https://jsonplaceholder.typicode.com/users/{}'
+                .format(user_id))
             user = json.loads(y.read())
             status = i.get('completed')
             title = i.get('title')
@@ -28,5 +30,4 @@ if __name__ == "__main__":
 
     with open('{}.csv'.format(user_id), 'w') as f:
         csvwriter = csv.writer(f, quoting=csv.QUOTE_ALL)
-       # csvwriter.writerow(fields)
         csvwriter.writerows(rows)

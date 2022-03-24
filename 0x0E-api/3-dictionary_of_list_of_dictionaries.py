@@ -16,7 +16,8 @@ if __name__ == "__main__":
         username = i.get('username')
         user_id = i.get('id')
 
-        x = urllib.request.urlopen('https://jsonplaceholder.typicode.com/todos/')
+        x = urllib.request.urlopen(
+            'https://jsonplaceholder.typicode.com/todos/')
         todo = json.loads(x.read())
         for j in todo:
             if j.get('userId') == int(user_id):

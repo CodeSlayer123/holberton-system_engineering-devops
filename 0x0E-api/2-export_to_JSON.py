@@ -10,7 +10,8 @@ if __name__ == "__main__":
     data = {}
     my_list = []
 
-    y = urllib.request.urlopen('https://jsonplaceholder.typicode.com/users/{}'.format(user_id))
+    y = urllib.request.urlopen('https://jsonplaceholder.typicode.com/users/{}'
+                               .format(user_id))
     user = json.loads(y.read())
     username = user.get('username')
     y.close()
